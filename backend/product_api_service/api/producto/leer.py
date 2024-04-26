@@ -9,14 +9,9 @@ from sqlalchemy import Select, func, select
 from product_api_service import models
 from product_api_service.database.session import create_local_session
 
-product_read_bp = Blueprint(
-    "producto",
-    __name__,
-    url_prefix="/producto",
-)
 
 
-@product_read_bp.get("/<id>")
+
 def read_by_product_id(id):
     with create_local_session() as db_session:
         product_query: Select = select(models.Producto).where(
@@ -49,7 +44,7 @@ def read_by_product_id(id):
     return product_as_dict, 200
 
 
-@product_read_bp.get("/")
+
 def read_by_query():
 
     http_query = request.args

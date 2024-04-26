@@ -4,10 +4,7 @@ from product_api_service.models import User
 from product_api_service.database.session import create_local_session
 from product_api_service.auth.admin import protected_route
 
-blueprint_eliminar_usuario = Blueprint("usuarios", __name__, url_prefix="/user")
-
 # Endpoint para eliminar usuario
-@blueprint_eliminar_usuario.route('/eliminar/<id_usuario>', methods=["POST"])
 @protected_route
 def eliminar_usuario(id_usuario):
     if id_usuario is not None:

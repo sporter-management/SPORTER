@@ -9,14 +9,7 @@ from product_api_service import models
 from product_api_service.database.session import create_local_session
 from product_api_service.auth.admin import protected_route
 
-user_read_bp = Blueprint(
-    "user",
-    __name__,
-    url_prefix="/user",
-)
 
-
-@user_read_bp.get("/<id>")
 @protected_route
 def read_by_product_id(id):
     with create_local_session() as db_session:
@@ -43,7 +36,6 @@ def read_by_product_id(id):
     return user_as_dict, 200
 
 
-@user_read_bp.get("/")
 def read_by_query():
     
     http_query = request.args

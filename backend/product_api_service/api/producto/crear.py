@@ -13,11 +13,7 @@ from product_api_service import schemas, models
 
 from product_api_service.auth.admin import protected_route
 
-altaProductBP = Blueprint(
-    "altaProductBP",
-    __name__,
-    url_prefix="/producto",
-)
+
 
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
@@ -26,7 +22,6 @@ def allowed_file(filename):
        filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-@altaProductBP.post("/crear")
 @protected_route
 def altaProduct():
 

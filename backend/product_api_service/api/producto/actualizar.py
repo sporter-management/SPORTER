@@ -9,14 +9,6 @@ from product_api_service.auth.admin import protected_route
 import os
 
 
-updateProduct_bp = Blueprint(
-    "updateProduct",
-    __name__,
-    url_prefix="/producto",
-)
-
-
-@updateProduct_bp.post("/actualizar")
 @protected_route
 def update_existingProduct():
 

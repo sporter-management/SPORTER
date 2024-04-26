@@ -8,14 +8,6 @@ from sqlalchemy import Select, func, select, or_
 from product_api_service import models
 from product_api_service.database.session import create_local_session
 
-read_tag_bp = Blueprint(
-    "etiqueta",
-    __name__,
-    url_prefix="/etiqueta/leer",
-)
-
-
-@read_tag_bp.get("/<identificacion>")
 def read_by_product_id(identificacion):
     with create_local_session() as db_session:
         select_by_identifier: Select = select(models.Etiqueta).where(
@@ -59,7 +51,6 @@ def read_by_product_id(identificacion):
     return tag_as_dict, 200
 
 
-@read_tag_bp.get("/")
 def read_all():
     with create_local_session() as db_session:
         read_all_with_prod_quant: Select = (

@@ -5,10 +5,8 @@ from product_api_service.models import Producto
 from product_api_service.database.session import create_local_session
 from product_api_service.auth.admin import protected_route
 
-blueprint_eliminar = Blueprint("productos", __name__, url_prefix="/producto")
 
 #endpoint "eliminar producto"
-@blueprint_eliminar.route('/eliminar/<id_producto>', methods=["POST"])
 @protected_route
 def eliminar_producto(id_producto):
     
