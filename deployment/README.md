@@ -14,7 +14,6 @@ Para desplegar este proyecto de manera correcta necesitarás:
 - MySQL instalado
 - El [repositorio de la api](https://github.com/sporter-management/product_api_service)  de sporter
 - El [repositorio del frontend](https://github.com/sporter-management/web_frontend)  de sporter
-- Las dependencias de ambos repositorios instaladas
 - Leer atentamente este archivo y [la referencia de configuración del entorno](./env/reference.env)
 
 Es preferible que los directorios de backend y frontend se hallen de manera adyacente a este:
