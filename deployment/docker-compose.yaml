@@ -44,7 +44,8 @@ services:
     ports:
       - 5000:5000
     depends_on:
-      - sporter_db
+      sporter_db:
+        condition: service_healthy
     networks:
       - backend
 
@@ -55,6 +56,10 @@ services:
       - database_volume:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 3
     networks:
       - backend
 
