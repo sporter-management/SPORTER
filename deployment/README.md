@@ -29,21 +29,9 @@ De otra manera, presta atención a la última sección del [archivo de referenci
 
 ## 2. Vistazo general de docker
 
-### Crear un volumen para la base de datos
-
-Los contenedores son efímeros, la información almacenada en ellos puede seguir existiendo si estos se paran pero se pierde una vez estos son removidos por suerte Docker cuenta con volúmenes que pueden montarse a los contenedores para así persistir datos más allá de la vida de un contenedor.
-
-Necesitarás crear uno para la base de datos, puedes hacerlo de la siguiente manera:
-
-``` bash
-$ docker volume create sporter_db_volume 
-```
-
-Ese es el nombre que hemos establecido por defecto en el [archivo de configuracion de entorno](./env/reference.env), si necesitas usar otro, asegura de cambiar el valor de la variable `API_DATABASE_VOLUME`.
-
 ### Docker Compose
 
-Docker compose permite definir la configuración de varios contenedores al mismo tiempo en un solo archivo, facilitando el despliegue de apliaciones multicontenedor así como su control.
+Docker compose permite definir la configuración de varios contenedores al mismo tiempo en un solo archivo, facilitando el despliegue de apliaciones multicontenedor así como su control. Permite establecer sus contenedores, redes, directorios montados y variables de entorno.
 
 Aquí puedes ver nuestro archivo [docker-compose](./docker-compose.yaml).
 
