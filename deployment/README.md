@@ -12,18 +12,7 @@ Para desplegar este proyecto de manera correcta necesitarás:
 
 - Docker Engine y Docker Compose instalados
 - MySQL instalado
-- El [repositorio de la api](https://github.com/sporter-management/product_api_service)  de sporter
-- El [repositorio del frontend](https://github.com/sporter-management/web_frontend)  de sporter
 - Leer atentamente este archivo y [la referencia de configuración del entorno](./env/reference.env)
-
-Es preferible que los directorios de backend y frontend se hallen de manera adyacente a este:
-
-``` bash
-.
-├── product_api_service
-├── web_frontend
-└── despliegue
-```
 
 De otra manera, presta atención a la última sección del [archivo de referencia del entorno](./env/reference.env)
 
