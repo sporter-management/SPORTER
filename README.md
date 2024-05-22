@@ -7,6 +7,6 @@ Los integrantes del grupo son:
 - Andrade, Mauro
 - Ramirez, Yhonny
 - Rinaldi, Germán
-- Rogriguez, Martin
+- Rodriguez, Martin
 
 Para desplegar el proyecto una vez clonado referir a la [guía de setup en deployment](./deployment/README.md)

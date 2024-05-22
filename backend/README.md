@@ -7,7 +7,7 @@ Los integrantes del grupo son:
 - Andrade, Mauro
 - Ramirez, Yhonny
 - Rinaldi, Germán
-- Rogriguez, Martin
+- Rodriguez, Martin
 
 ## Guía de Setup
 
